@@ -4,7 +4,7 @@ object MyMain {
   def main(args: Array[String]): Unit = {
     val x = Example.getObjectInstance("mirroring.User")
     println(x)
-    
+
     val y = Example.getClassInstance("mirroring.Another")
     println(y)
 

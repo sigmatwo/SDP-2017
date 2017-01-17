@@ -1,10 +1,8 @@
 package decoupledinterface
 
-object HelloWorldDecoupledInterface {
-  def main(args: Array[String]) {
+object HelloWorldDecoupledInterface extends App{
     val mr: MessageRenderer = new StandardOutMessageRenderer
     val mp: MessageProvider = new HelloWorldMessageProvider
     mr.setMessageProvider(mp)
     mr.render
-  }
 }

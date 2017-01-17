@@ -1,12 +1,13 @@
 package helloworld
 
 object HelloWorldWithCommandLineArguments {
-  def main(args: Array[String]) {
+  def main(args: Array[String]) = {
     if (args.length > 0) {
-      println(args(0))
+      args.foreach(arg => print(arg +" "))
     }
     else {
-      println("Hello World!")
+      print("Hello World!")
     }
+    println();
   }
 }

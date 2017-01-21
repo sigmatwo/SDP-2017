@@ -139,6 +139,9 @@ object ScalaBasics {
   def isPalindrome(s: String): Boolean = ???
 
   /**
+   * You don't have to complete this one as we've removed it from the list 
+   * of required functions.
+   *
    * Sum the characters (as integers) provided as arguments to this method.
    *
    * Your implementation must conform to the following rules:
@@ -149,7 +152,7 @@ object ScalaBasics {
    * @param cc 0 or more characters
    * @return the sum of the ASCII integers corresponding with the character.
    */
-  def sumChars(cc: Char*): Int = ???
+  //def sumChars(cc: Char*): Int = ???
 
   /**
    * Counts the number of space delimited words in the provided array of strings.

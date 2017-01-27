@@ -1,10 +1,10 @@
 package decoupled;
 
 public class HelloWorldMessageProvider {
-    private String message = "Hello World!";
+  private String message = "Hello World!";
 
-    public String getMessage() {
-        return message;
-    }
+  public String getMessage() {
+    return message;
+  }
 
 }

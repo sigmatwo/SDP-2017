@@ -1,5 +1,5 @@
 package annotation;
 
 public interface MessageProvider {
-    String getMessage();
+  String getMessage();
 }

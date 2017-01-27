@@ -2,7 +2,7 @@ package autoscan;
 
 public interface MessageRenderer {
 
-    void render();
+  void render();
 
 //    public void setMessageProvider(MessageProvider provider);
 //    public MessageProvider getMessageProvider();

@@ -27,7 +27,7 @@ object ScalaBasics {
    * @return the inclusive Range from start to end
    */
   def inRange(start: Int, end: Int): Range = ???
-
+  
   /**
    * Write a function that returns a Range of odd n odd integers starting at 1.
    *
@@ -37,7 +37,7 @@ object ScalaBasics {
    * @return a Range of odd integers, excluding the last add integer
    */
   def oddRange(n: Int): Range = ???
-
+  
   /**
    * Write a function that returns the minimum integer in the Array r.
    *
@@ -139,7 +139,7 @@ object ScalaBasics {
   def isPalindrome(s: String): Boolean = ???
 
   /**
-   * You don't have to complete this one as we've removed it from the list 
+   * You don't have to complete this one as we've removed it from the list
    * of required functions.
    *
    * Sum the characters (as integers) provided as arguments to this method.

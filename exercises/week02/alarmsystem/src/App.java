@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class App {
   private static final String EXIT = "exit";
   private static final String POLL = "poll";
-  
+
   public static void main(String[] args) throws IOException {
     ControlUnit controlUnit = new ControlUnit();
 

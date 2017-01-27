@@ -20,11 +20,16 @@ class MessageSupportFactory private() {
 
   props = new Properties
   try {
-    props.load(new FileInputStream("di-scala/src/decoupledwithfactory/bean.properties"))
+    props.load(new FileInputStream(
+      "di-scala/src/decoupledwithfactory/bean.properties"))
+
     val rendererClass: String = props.getProperty("renderer.class")
     val providerClass: String = props.getProperty("provider.class")
-    renderer = Class.forName(rendererClass).newInstance.asInstanceOf[MessageRenderer]
-    provider = Class.forName(providerClass).newInstance.asInstanceOf[MessageProvider]
+
+    renderer = Class.forName(rendererClass).newInstance
+      .asInstanceOf[MessageRenderer]
+    provider = Class.forName(providerClass).newInstance
+      .asInstanceOf[MessageProvider]
   }
   catch {
     case ex: Exception => {
@@ -33,11 +38,7 @@ class MessageSupportFactory private() {
     }
   }
 
-  def getMessageRenderer: MessageRenderer = {
-    renderer
-  }
+  def getMessageRenderer: MessageRenderer = renderer
 
-  def getMessageProvider: MessageProvider = {
-    provider
-  }
+  def getMessageProvider: MessageProvider = provider
 }

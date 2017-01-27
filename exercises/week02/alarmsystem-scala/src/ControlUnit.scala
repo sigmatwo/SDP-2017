@@ -1,7 +1,5 @@
 import scala.collection.mutable.ListBuffer
 
-object ControlUnit
-
 class ControlUnit {
   def pollSensors() {
     val sensors = new ListBuffer[Sensor]()
@@ -17,3 +15,5 @@ class ControlUnit {
     }
   }
 }
+
+object ControlUnit

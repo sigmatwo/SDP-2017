@@ -3,24 +3,24 @@ package dixmlcons;
 
 public class StandardOutMessageRenderer implements MessageRenderer {
 
-    private MessageProvider messageProvider = null;
+  private MessageProvider messageProvider = null;
 
-    public void render() {
-        if (messageProvider == null) {
-            throw new RuntimeException(
-                    "You must set the property messageProvider of class:"
-                            + StandardOutMessageRenderer.class.getName());
-        }
-
-        System.out.println(messageProvider.getMessage());
+  public void render() {
+    if (messageProvider == null) {
+      throw new RuntimeException(
+                                  "You must set the property messageProvider of class:"
+                                    + StandardOutMessageRenderer.class.getName());
     }
 
-    public MessageProvider getMessageProvider() {
-        return messageProvider;
-    }
+    System.out.println(messageProvider.getMessage());
+  }
 
-    public void setMessageProvider(MessageProvider provider) {
-        messageProvider = provider;
-    }
+  public MessageProvider getMessageProvider() {
+    return messageProvider;
+  }
+
+  public void setMessageProvider(MessageProvider provider) {
+    messageProvider = provider;
+  }
 
 }

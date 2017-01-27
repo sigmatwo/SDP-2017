@@ -2,15 +2,15 @@ package dixmlcons;
 
 public class ConfigurableMessageProvider implements MessageProvider {
 
-    private String message;
+  private String message;
 
-    public ConfigurableMessageProvider(String message) {
-        this.message = message;
-    }
+  public ConfigurableMessageProvider(String message) {
+    this.message = message;
+  }
 
-    @Override
-    public String getMessage() {
-        return message;
-    }
+  @Override
+  public String getMessage() {
+    return message;
+  }
 
 }

@@ -64,7 +64,7 @@ class FunctionsTestSuite extends FunSuite {
     // Combined
 
     test("maxAverage calculates the max average") {
-        val list = List(1.0,2.0,3.0,4.0,5.0).map(x => (x, x+10))
+        val list = List(1.0,2.0,3.0,4.0,5.0).map(x => (x, x + 10))
         assert(maxAverage(list) == 13.0)
     }
 

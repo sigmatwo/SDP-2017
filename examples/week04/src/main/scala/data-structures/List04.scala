@@ -14,10 +14,10 @@ object ListADT {
   // Nothing is a subtype of all types - so, Nil can be considered
   // a List[Int], List[String], etc. which is important for our
   // definition.
-  case object Nil extends List[Nothing]
+  final case object Nil extends List[Nothing]
 
   // A data constructor for representing a non-empty list.
-  case class Cons[+A](head: A, tail: List[A]) extends List[A]
+  final case class Cons[+A](head: A, tail: List[A]) extends List[A]
 
   // The list companion object.
   object List {
@@ -46,15 +46,21 @@ object ListADT {
       case Cons(x, xs) => Cons(e, xs)
     }
 
-    def apply[A](as: A*): List[A] =
+    def apply[A](as: A*): List[A] = // public static void main(String... args) equiv in Java
       if (as.isEmpty) Nil
       else Cons(as.head, apply(as.tail: _*))
   }
 
   def main(args: Array[String]): Unit = {
-    val xs = List(1,2,3)
+    var xs = List(1,2,3)
     println(xs)
+    xs = List(1)
+    println(xs)
+    xs = List()
+    println(xs)
+
+    xs = List(1,2,3)
     println(xs + " summed is " + List.sum(xs))
-    println("The identity of " + xs + " is " + List.identity(xs))
+//    println("The identity of " + xs + " is " + List.identity(xs))
   }
 }

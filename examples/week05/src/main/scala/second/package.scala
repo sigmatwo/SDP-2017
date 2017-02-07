@@ -2,10 +2,10 @@ package second
 
 package object utils {
     implicit class StringImprovements(val s: String) {
-        def increment = s.map(c => (c + 1).toChar)
-        def hideAll = s.replaceAll(".", "*")
-        def plusOne = s.toInt + 1
-        def asBoolean = s match {
+        def increment: String = s.map(c => (c + 1).toChar)
+        def hideAll: String = s.replaceAll(".", "*")
+        def plusOne: Int = s.toInt + 1
+        def asBoolean: Boolean = s match {
             case "0" | "zero" | "" | " " => false
             case _ => true
         }

@@ -1,26 +1,44 @@
-package traffic
+// write a sealed trait/case objects to represent TrafficLights 
+// Red, Green, Amber 
 
-// Model a Traffic Light (TL) using sealed trait(s) 
-// and case class(es) or case object(s)
-// A TL is either Red, Green, or Amber
+// sealed trait TrafficLight 
+// final case object Red extends TrafficLight
+// final case object Green extends TrafficLight
+// final case object Amber extends TrafficLight
 
-// Using polymorphism add a method "next" which returns the next TL in sequence
-// Red -> Green -> Amber -> Red
+// Write a method next() which takes the colour from Red -> Green -> Amber -> Red
+
+// Polymorphism
+
+// sealed trait TrafficLight {
+//     def next: TrafficLight    
+// }
+
+// final case object Red extends TrafficLight {
+//     def next = Green
+// }
+
+// final case object Green extends TrafficLight {
+//     def next = Amber
+// }
+
+// final case object Amber extends TrafficLight {
+//     def next = Red
+// }
+
+// Write a method next() which takes the colour from Red -> Green -> Amber -> Red
+
+// Pattern Matching
 
 sealed trait TrafficLight {
-    def next: TrafficLight
+    def next: TrafficLight = 
+        this match {
+            case Red => Green
+            case Green => Amber
+            case Amber => Red
+        }
 }
 
-final case object Red extends TrafficLight {
-    def next = {
-        Green // don't use return
-    }
-}
-
-final case object Green extends TrafficLight {
-    def next = Amber
-}
-
-final case object Amber extends TrafficLight {
-    def next = Red
-}
+final case object Red extends TrafficLight
+final case object Green extends TrafficLight
+final case object Amber extends TrafficLight

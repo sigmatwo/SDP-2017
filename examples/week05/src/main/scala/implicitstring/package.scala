@@ -1,4 +1,4 @@
-package second
+package implicitstring
 
 package object utils {
     implicit class StringImprovements(val s: String) {

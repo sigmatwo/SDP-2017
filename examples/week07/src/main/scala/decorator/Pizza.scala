@@ -1,15 +1,11 @@
-package decorator;
+package decorator
 
 // Blueprint for classes that will have decorators
+trait Pizza {
+  def getDescription: String
 
-public interface Pizza {
-
-    String getDescription();
-
-    double getCost();
-
+  def getCost: Double
 }
-
 
 /*
 public abstract class Pizza{

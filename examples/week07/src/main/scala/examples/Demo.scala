@@ -13,5 +13,5 @@ object Demo {
 
 object Foo extends App {
     //new Demo("a","b",3).meth()
-    Demo("fred betty 34")
+    Demo("fred betty 34") // implicit call to apply
 }

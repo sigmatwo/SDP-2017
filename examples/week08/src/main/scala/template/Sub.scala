@@ -3,7 +3,7 @@ package template
 // A Template Method Pattern contains a method that provides
 // the steps of the algorithm. It allows subclasses to override
 // some of the methods
-abstract class Sub {
+trait Sub {
 
   // This is the Template Method
   // Declare this method final to keep subclasses from
@@ -26,9 +26,7 @@ abstract class Sub {
     wrapTheHoagie()
   }
 
-  def cutBun() {
-    System.out.println("The Hoagie is Cut")
-  }
+  def cutBun() = println("The Hoagie is Cut")
 
   // These are called hooks
   // If the user wants to override these they can

@@ -1,23 +1,13 @@
 package interpreter
 
-class Pints extends Expression {
-  def gallons(quantity: Double): String = {
-    return Double.toString(quantity / 8)
-  }
+final case class Pints() extends Expression {
+  override def gallons(quantity: Double) = (quantity / 8).toString
 
-  def quarts(quantity: Double): String = {
-    return Double.toString(quantity / 2)
-  }
+  override def quarts(quantity: Double)= (quantity / 2).toString
 
-  def pints(quantity: Double): String = {
-    return Double.toString(quantity)
-  }
+  override def pints(quantity: Double) = quantity.toString
 
-  def cups(quantity: Double): String = {
-    return Double.toString(quantity * 2)
-  }
+  override def cups(quantity: Double) = (quantity * 2).toString
 
-  def tablespoons(quantity: Double): String = {
-    return Double.toString(quantity * 32)
-  }
+  override def tablespoons(quantity: Double)= (quantity * 32).toString
 }

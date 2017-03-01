@@ -5,12 +5,12 @@ package flyweight
 // Intrinsic State: Color
 // Extrinsic State: X & Y Values
 import java.awt.Color
-import java.util.HashMap
+import scala.collection.mutable.HashMap
 
 object RectFactory {
   // The HashMap uses the color as the key for every
   // rectangle it will make up to 8 total
-  private val rectsByColor: util.HashMap[Color, MyRect] = new util.HashMap[Color, MyRect]
+  private val rectsByColor = HashMap[Color, MyRect]()
 
   def getRect(color: Color): MyRect = {
     var rect: MyRect = rectsByColor.get(color).asInstanceOf[MyRect]
@@ -22,6 +22,6 @@ object RectFactory {
       // Add new rectangle to HashMap
       rectsByColor.put(color, rect)
     }
-    return rect
+    rect
   }
 }

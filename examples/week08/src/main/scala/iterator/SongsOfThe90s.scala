@@ -1,36 +1,30 @@
 package iterator
 
-import java.util.Hashtable
-import java.util.Iterator
+import scala.collection.mutable.HashMap
 
-class SongsOfThe90s() extends SongIterator {
+case class SongsOfThe90s() extends SongIterator {
+  private[iterator] val bestSongs = new HashMap[Integer, SongInfo]
+
   addSong("Losing My Religion", "REM", 1991)
   addSong("Creep", "Radiohead", 1993)
   addSong("Walk on the Ocean", "Toad The Wet Sprocket", 1991)
-  // Create a Hashtable with an int as a key and SongInfo
-  // Objects
-  private[iterator] val bestSongs: util.Hashtable[Integer, SongInfo] = new util.Hashtable[Integer, SongInfo]
-  // Will increment the Hashtable key
+
+  // Create a HashMap with an int as a key and SongInfo Objects
+  // Will increment the HashMap key
   private[iterator] var hashKey: Int = 0
 
-  // Add a new SongInfo Object to the Hashtable and then increment
-  // the Hashtable key
+  // Add a new SongInfo Object to the HashMap and then increment the HashMap key
   def addSong(songName: String, bandName: String, yearReleased: Int) {
-    val songInfo: SongInfo = new SongInfo(songName, bandName, yearReleased)
+    val songInfo: SongInfo = SongInfo(songName, bandName, yearReleased)
     bestSongs.put(hashKey, songInfo)
     hashKey += 1
   }
 
   // This is replaced by the Iterator
-  // Return a Hashtable full of SongInfo Objects
-  def getBestSongs: util.Hashtable[Integer, SongInfo] = {
-    return bestSongs
-  }
+  // Return a HashMap full of SongInfo Objects
+  def getBestSongs: HashMap[Integer, SongInfo] = bestSongs
 
   // NEW By adding this method I'll be able to treat all
   // collections the same
-  def createIterator: util.Iterator[_] = {
-    // TODO Auto-generated method stub
-    return bestSongs.values.iterator
-  }
+  override def createIterator = bestSongs.valuesIterator
 }

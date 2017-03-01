@@ -6,7 +6,7 @@ package command
 // The execute method for the Command interface then calls
 // the method assigned in the class that implements the
 // Command interface
-case class DeviceButton(var theCommand: Command) {
+case class DeviceButton(theCommand: Command) {
   def press() = theCommand.execute()
 
   // Now the remote can undo past commands

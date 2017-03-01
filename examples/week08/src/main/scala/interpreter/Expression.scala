@@ -1,6 +1,6 @@
 package interpreter
 
-abstract class Expression {
+trait Expression {
   def gallons(quantity: Double): String
 
   def quarts(quantity: Double): String

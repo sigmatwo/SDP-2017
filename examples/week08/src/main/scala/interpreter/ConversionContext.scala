@@ -1,11 +1,11 @@
 package interpreter
 
 case class ConversionContext(val input: String) {
-  private[interpreter] var partsOfQues: Array[String] = input.split(" ")
   var fromConversion: String = getCapitalized(partsOfQues(1))
   var toConversion: String = getLowercase(partsOfQues(3))
   var quantity: Double = partsOfQues(0).toDouble
   var conversionResponse: String = partsOfQues(0) + " " + partsOfQues(1) + " equals "
+  private[interpreter] var partsOfQues: Array[String] = input.split(" ")
 
   // Make String lowercase
   def getLowercase(wordToLowercase: String): String = wordToLowercase.toLowerCase

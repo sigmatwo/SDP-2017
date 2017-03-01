@@ -85,21 +85,10 @@ object TestingReflection extends App {
     constructor2 = reflectClass.getConstructor(classOf[Int], classOf[String]).newInstance(new Integer(12), "Random String")
   }
   catch {
-    case e: Any => {
-      e.printStackTrace()
-    }
-    case e: InstantiationException => {
-      e.printStackTrace()
-    }
-    case e: IllegalAccessException => {
-      e.printStackTrace()
-    }
-    case e: IllegalArgumentException => {
-      e.printStackTrace()
-    }
-    case e: InvocationTargetException => {
-      e.printStackTrace()
-    }
+    case e: InstantiationException => e.printStackTrace()
+    case e: IllegalAccessException => e.printStackTrace()
+    case e: IllegalArgumentException => e.printStackTrace()
+    case e: InvocationTargetException => e.printStackTrace()
   }
   // How to access class constructors
   var constructor: Constructor[_] = null
@@ -157,20 +146,9 @@ object TestingReflection extends App {
 
   }
   catch {
-    case e: Any => {
-      e.printStackTrace()
-    }
-    case e: IllegalArgumentException => {
-      e.printStackTrace()
-    }
-    case e: IllegalAccessException => {
-      e.printStackTrace()
-    }
-    case e: NoSuchMethodException => {
-      e.printStackTrace()
-    }
-    case e: InvocationTargetException => {
-      e.printStackTrace()
-    }
+    case e: IllegalArgumentException => e.printStackTrace()
+    case e: IllegalAccessException => e.printStackTrace()
+    case e: NoSuchMethodException => e.printStackTrace()
+    case e: InvocationTargetException => e.printStackTrace()
   }
 }

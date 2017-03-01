@@ -5,8 +5,8 @@ package bridge
 // abstract class. I'm specifying what makes it different
 // from other devices
 case class DVDDevice(newDeviceState: Int, newMaxSetting: Int) extends EntertainmentDevice {
-  super.deviceState = newDeviceState
-  super.maxSetting = newMaxSetting
+  deviceState = newDeviceState
+  maxSetting = newMaxSetting
 
   override def buttonFivePressed() {
     println("DVD Skips to Chapter")

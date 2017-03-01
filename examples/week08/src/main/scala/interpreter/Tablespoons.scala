@@ -1,6 +1,6 @@
 package interpreter
 
-class Tablespoons extends Expression {
+final case class Tablespoons() extends Expression {
   override def gallons(quantity: Double): String = String.valueOf(quantity / 256)
 
   override def quarts(quantity: Double): String = String.valueOf(quantity / 64)

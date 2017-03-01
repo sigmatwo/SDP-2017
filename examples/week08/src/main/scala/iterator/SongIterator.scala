@@ -1,7 +1,5 @@
 package iterator
 
-import java.util.Iterator
-
 trait SongIterator {
-  def createIterator: util.Iterator[_]
+  def createIterator: Iterator[SongInfo]
 }

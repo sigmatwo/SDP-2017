@@ -4,13 +4,9 @@ case class VeggieSub() extends Sub {
   private[template] val veggiesUsed = Array("Lettuce", "Tomatoes", "Onions", "Sweet Peppers")
   private[template] val condimentsUsed = Array("Oil", "Vinegar")
 
-  override private[template] def customerWantsMeat: Boolean = {
-    return false
-  }
+  override private[template] def customerWantsMeat: Boolean = false
 
-  override private[template] def customerWantsCheese: Boolean = {
-    return false
-  }
+  override private[template] def customerWantsCheese: Boolean = false
 
   override def addVegetables() {
     System.out.print("Adding the Vegetables: ")
@@ -26,7 +22,7 @@ case class VeggieSub() extends Sub {
     }
   }
 
-  override private[template] def addMeat()
+  override private[template] def addMeat() = println("You can't add meat")
 
-  override private[template] def addCheese()
+  override private[template] def addCheese() = println("You can't add cheese")
 }

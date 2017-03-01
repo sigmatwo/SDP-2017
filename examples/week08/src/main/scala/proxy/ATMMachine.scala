@@ -21,11 +21,11 @@ case class ATMMachine() extends GetATMData with ATMState {
 
   override def getCashInMachine: Int = cashInMachine
 
-  override def insertCard()
+  override def insertCard() = println("inserting card")
 
-  override def ejectCard()
+  override def ejectCard() = println("ejecting card")
 
-  override def insertPin(pinEntered: Int)
+  override def insertPin(pinEntered: Int) = println(s"Pin entered $pinEntered")
 
-  override def requestCash(cashToWithdraw: Int)
+  override def requestCash(cashToWithdraw: Int) = println(s"Cash to withdraw $cashToWithdraw")
 }

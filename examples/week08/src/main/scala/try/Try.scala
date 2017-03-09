@@ -5,8 +5,8 @@ object TryApp extends App {
   divide
 
   def divide: Try[Int] = {
-    val dividend = Try(StdIn.readLine("Enter an Int that you'd like to divide:\n").toInt)
-    val divisor = Try(StdIn.readLine("Enter an Int that you'd like to divide by:\n").toInt)
+    val dividend = Try(StdIn.readLine("Enter an Int that you'd like to divide: ").toInt)
+    val divisor = Try(StdIn.readLine("Enter an Int that you'd like to divide by: ").toInt)
     val problem = dividend.flatMap(x => divisor.map(y => x/y))
     problem match {
       case Success(v) =>

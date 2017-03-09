@@ -6,7 +6,6 @@ sealed trait IntList {
             case End => 0
             case Pair(hd, tl) => 1 + tl.length
         }
-
  
     def product: Int =
         this match {

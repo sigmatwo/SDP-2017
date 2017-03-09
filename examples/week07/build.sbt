@@ -15,3 +15,7 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test"
 ideaExcludeFolders += ".idea"
 
 ideaExcludeFolders += ".idea_modules"
+
+//wartremoverErrors in (Compile, compile) ++= Warts.all
+
+//scapegoatVersion := "1.3.0"

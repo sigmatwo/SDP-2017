@@ -1,7 +1,5 @@
 package composite
 
-import java.util.List
-
 abstract class HtmlTag(tagName: String) {
   def getTagName: String = tagName
 

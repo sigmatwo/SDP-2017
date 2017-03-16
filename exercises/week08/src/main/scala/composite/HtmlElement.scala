@@ -1,7 +1,6 @@
 package composite
 
 // TODO
-
 case class HtmlElement(s: String) extends HtmlTag(s) {
   override def setStartTag(tag: String): Unit = ???
 
